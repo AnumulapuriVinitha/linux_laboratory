@@ -53,4 +53,26 @@ for file in "$@"
   fi
   echo "word count for $file:"
   cat "$file" | tr '[:upper:]' '[:lower:]' | tr -cs '[:alpha:]' '\n' |sort | uniq -c| sort -nr
+done 
+
+Q2:
+read-p "enter a number:"num 
+fact=1
+while [$num -gt 1]
+do
+fact=$((fact * num))
+num=$((num-1))
 done
+echo $fact
+
+
+Q3:
+echo "enter directory name"
+read dir
+if [ -d $dir ]
+then
+echo "list of files in the directory"
+ls –l $dir|egrep ‘^d’
+else
+echo "enter proper directory name"
+fi
