@@ -1,5 +1,6 @@
 WEEK1&2 :
-Q2: 
+Q2: Write a shell script that accepts a file name, starting and ending line numbers as arguments and displays all the lines between the given line numbers
+
 echo "enter the filename:"
 read f
 echo "enter the starting value:"
