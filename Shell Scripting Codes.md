@@ -1,5 +1,5 @@
-WEEK1&2 :
-Q2: Write a shell script that accepts a file name, starting and ending line numbers as arguments and displays all the lines between the given line numbers
+# WEEK1&2 :
+**Q2:Write a shell script that accepts a file name, starting and ending line numbers as arguments and displays all the lines between the given line numbers**
 
 echo "enter the filename:"
 read f
@@ -9,7 +9,8 @@ echo "enter the ending value:"
 read e
 sed -n $s,$e\p $f
 
-Q3:
+**Q3:Write a shell script that deletes all lines containing a specified word in one or more files supplied as arguments to it**
+
 echo "enter the word:"
 ead word
 for file in "$@"; do
@@ -21,16 +22,15 @@ echo " file not found"
 fi
 done
 
-WEEK3:
-
-Q1:
+# WEEK3:
+**Q1:Write a shell script that displays a list the files in the current directory**
 echo "files in curr directory:"
 for i in *
 do
 echo $i
 done
 
-Q2:
+**Q2:Shell script that receives any number of file names as arguments check if every argument supplied is a file or directory and reports accordingly.when over the argument is a file or directory**
 for x in $*
 do
 if [ -f $x ]
@@ -42,9 +42,9 @@ else
 echo "entre valid filename or dir name"
 fi done
 
-WEEK4:
+# WEEK4:
 
-Q1:
+**Q1:Write a shell script that accept a list of file names as arguments count and report the occurrence of each word**
 for file in "$@"
  do
   if [ ! -f "$file" ]
@@ -56,7 +56,7 @@ for file in "$@"
   cat "$file" | tr '[:upper:]' '[:lower:]' | tr -cs '[:alpha:]' '\n' |sort | uniq -c| sort -nr
 done 
 
-Q2:
+**Q2:Write a shell script to find the factorial of given integer**
 read-p "enter a number:"num 
 fact=1
 while [$num -gt 1]
@@ -67,7 +67,7 @@ done
 echo $fact
 
 
-Q3:
+**Q3:Write a shell script that list the all files in a directory**
 echo "enter directory name"
 read dir
 if [ -d $dir ]
