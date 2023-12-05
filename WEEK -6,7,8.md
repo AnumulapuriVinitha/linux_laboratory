@@ -80,16 +80,16 @@ int main(void) {
     pid_t pid;
     int status;
 
-    printf("Hello World!\n");
+  printf("Hello World!\n");
 
-    pid = fork();
+  pid = fork();
 
-    if (pid == -1) { /* check for error in fork */
+  if (pid == -1) { /* check for error in fork */
         perror("bad fork");
         exit(1);
     }
 
-    if (pid == 0) {
+  if (pid == 0) {
         printf("I am the child process.\n");
         // Add child process code here
         exit(0); // Make sure the child process exits after its work is done
@@ -98,7 +98,7 @@ int main(void) {
         printf("I am the parent process.\n");
     }
 
-    return 0;
+   return 0;
 }
 
 ### 2.Write a C program to create a Zombie process.
@@ -111,7 +111,7 @@ int main() {
     pid_t child_pid;
     child_pid = fork();
 
-    if (child_pid > 0) {
+  if (child_pid > 0) {
         // This is the parent process
         printf("Parent process. PID: %d\n", getpid());
         sleep(60);
@@ -125,5 +125,8 @@ int main() {
         return 1;
     }
 
-    return 0;
+  return 0;
 }
+
+# WEEK-8 
+
